@@ -1,0 +1,38 @@
+{
+  "name": "entertainment-cms-server",
+  "version": "1.0.0",
+  "description": "Backend server for Entertainment Content Management System",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "setup": "node ../database/setup-db.js"
+  },
+  "keywords": [
+    "entertainment",
+    "cms",
+    "neon",
+    "postgresql",
+    "express"
+  ],
+  "author": "Entertainment CMS Team",
+  "license": "MIT",
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.2",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "drizzle-orm": "^0.44.7",
+    "express": "^5.1.0",
+    "express-validator": "^7.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.5",
+    "@types/multer": "^1.4.11",
+    "nodemon": "^3.1.10"
+  }
+}

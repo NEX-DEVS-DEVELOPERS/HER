@@ -1,0 +1,41 @@
+{
+  "herName": "Eman",
+  "nickname": "mera bachaa",
+  "yourName": "Ali Hasnaat",
+  "colorTheme": "#FFD6E0",
+  "memoryLines": [
+    "We met on 11 May 2023 and I knew every sacrifice would be worth it.",
+    "You held on even when my hours disappeared into building Nex-Devs.",
+    "This birthday is my promise to slow down and love you louder."
+  ],
+  "photoAssets": [
+    "assets/hero-eman.jpg",
+    "assets/gallery-call-screenshot.jpg",
+    "assets/gallery-airport-hug.jpg"
+  ],
+  "favoriteSong": "",
+  "surpriseChoice": "hearts",
+  "privacy": "unlisted",
+  "hostingChoice": "netlify",
+  "relationshipTimeline": {
+    "metOn": "2023-05-11",
+    "herBirthday": "2025-10-30",
+    "status": "long-distance",
+    "notes": "We promise to close the distance soon and celebrate every October 30 together."
+  },
+  "longDistanceHighlights": [
+    "You remind me to pause, breathe, and eat when work takes over",
+    "You cheer for every small Nex-Devs milestone like it's your own win",
+    "We trade encouragement messages that make the miles disappear"
+  ],
+  "longDistanceChallenges": [
+    "Balancing long hours of skill-building with the time you deserve",
+    "Missing the simple joy of showing up beside you every day",
+    "Learning to communicate love even when I'm exhausted"
+  ],
+  "promises": [
+    "Believe in me a little longer and I'll give you the time you've given me",
+    "When Nex-Devs stands tall, the first thing I'll build is a life where you're never waiting",
+    "I'm saving every plan for the day I ask you to marry me and stay"
+  ]
+}
