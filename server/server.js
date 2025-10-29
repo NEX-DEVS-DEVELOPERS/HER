@@ -4,6 +4,7 @@ import cors from 'cors';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { checkDatabaseConnection } from './lib/db.js';
+import { basicAuth } from './middleware/auth.js';
 import 'dotenv/config';
 
 // Import routes
@@ -22,12 +23,16 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 // Middleware
+app.use(basicAuth);
 app.use(cors());
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 
 // Serve uploaded files
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
+// Serve static files from Vite build
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Health check endpoint
 app.get('/health', async (req, res) => {
@@ -73,12 +78,17 @@ app.use((error, req, res, next) => {
   });
 });
 
-// 404 handler
-app.use((req, res) => {
+// 404 handler for API routes
+app.use('/api', (req, res) => {
   res.status(404).json({
     success: false,
-    error: 'Route not found'
+    error: 'API route not found'
   });
+});
+
+// Serve React app for all non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 // Start server

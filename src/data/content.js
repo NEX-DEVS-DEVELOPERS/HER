@@ -2,15 +2,15 @@ import metadata from '../../metadata.json';
 
 export const heroContent = {
   eyebrow: 'From miles away, with all my love',
-  headline: 'Happy Birthday Eman 💖',
+  headline: 'Happy Birthday The Love of My Life Mera Bachaa 💖',
   subtext: 'You held space for me even when the hours slipped into building Nex-Devs and every update felt late.',
   supportLines: [
     'You guarded my focus, whispered reminders to eat, and never let the pressure swallow me whole.',
     'When my energy crashed, you lent me your belief so I could finish every sprint with your name on it.',
-    'Your support is the quiet reason Nex-Devs moves forward—because you kept saying “we” when it was just me coding alone.'
+    'Your support is the quiet reason Nex-Devs moves forward—because you kept saying "we" when it was just me coding alone.'
   ],
   signature: "I know I'm short on time now, but every sunrise brings me closer to giving you all of mine.",
-  ctaLabel: 'Tap here for your surprise 🎁',
+  ctaLabel: 'Come Closer 💫',
   workInProgressNote: 'This website is still a work in progress and I am polishing every page—please accept this little reward for now, honey.'
 };
 

@@ -57,17 +57,6 @@ function LoveJourneyModal({ isOpen, onDismiss, onComplete, onStageChange }) {
       subtitle="Tap through each chapter we survived, celebrated, and promised."
     >
       <div className="love-journey">
-        <div
-          className="love-journey__progress"
-          role="progressbar"
-          aria-label="Progress through our love stages"
-          aria-valuemin={1}
-          aria-valuemax={totalStages}
-          aria-valuenow={currentIndex + 1}
-        >
-          <div className="love-journey__progress-bar" style={{ width: `${progressValue}%` }} />
-        </div>
-
         <div className="love-journey__stage-wrapper">
           {currentIndex > 0 && (
             <button

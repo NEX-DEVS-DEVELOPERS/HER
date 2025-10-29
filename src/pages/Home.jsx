@@ -8,9 +8,10 @@ import StatusPanel from '../components/StatusPanel.jsx';
 import MessageLinks from '../components/MessageLinks.jsx';
 import AudioPlayer from '../components/AudioPlayer.jsx';
 import LoveJourneyModal from '../components/LoveJourneyModal.jsx';
+import { useAudio } from '../context/AudioContext.jsx';
 
 function Home() {
-  const audioPlayerRef = useRef(null);
+  const { play } = useAudio();
   const [isJourneyOpen, setIsJourneyOpen] = useState(false);
   const stageAudioTriggeredRef = useRef(false);
 
@@ -36,15 +37,9 @@ function Home() {
     setIsJourneyOpen(false);
     stageAudioTriggeredRef.current = true;
 
-    if (typeof window !== 'undefined') {
-      window.requestAnimationFrame(() => {
-        setTimeout(() => {
-          audioPlayerRef.current?.play?.();
-        }, 260);
-      });
-    } else {
-      audioPlayerRef.current?.play?.();
-    }
+    setTimeout(() => {
+      play();
+    }, 300);
   };
 
   const handleJourneyDismiss = () => {
@@ -55,9 +50,9 @@ function Home() {
   };
 
   const handleStageChange = (stageIndex) => {
-    if (stageIndex >= 8 && !stageAudioTriggeredRef.current) {
+    if (stageIndex >= 9 && !stageAudioTriggeredRef.current) {
       stageAudioTriggeredRef.current = true;
-      audioPlayerRef.current?.play?.();
+      play();
     }
   };
 
@@ -70,11 +65,7 @@ function Home() {
         onStageChange={handleStageChange}
       />
       <HeroSection />
-      <AudioPlayer
-        ref={audioPlayerRef}
-        trackTitle="Love for You"
-        note="Our soundtrack starts playing from chapter seven and keeps singing once you finish the 10 stages."
-      />
+      <AudioPlayer />
       <StatusPanel />
       <LetterSection />
       <GratitudeSection />
